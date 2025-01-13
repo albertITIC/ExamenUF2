@@ -4,7 +4,6 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-
 # Base Model de la nostra base de dades
 class formulario (BaseModel):
     nombre : str
@@ -22,4 +21,11 @@ class formulario (BaseModel):
 @app.get("/")
 def read_root():
     return {"API de Formulari"}
+
+# Enpoint per afefir un nou usuari
+@app.post("/formulari/add_user")
+async def crear_usuari (data: formulario):
+    
+    
+
 

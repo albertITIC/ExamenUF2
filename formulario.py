@@ -11,6 +11,6 @@ def formulari_schema(formulari) -> dict:
             "password":formulari [8]
             }
 
-# Recor
+# Recorro tots els camps del schema anterior
 def formularis_schema(formularis) -> dict:
     return [formulari_schema(formulari) for formulari in formularis]
